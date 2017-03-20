@@ -1,0 +1,88 @@
+@import "normalize";
+@import "variables";
+
+
+body {
+	font-size: 13px;
+	font-family: $basefont;
+	background: $light;
+	main {
+		margin-top: 10%;
+		h1 {
+			text-align: center;
+			text-transform: uppercase;
+			// margin-bottom: 5rem;
+		}
+		.buttons {
+			display: flex;
+			text-align: center;
+			justify-content: center;
+			margin-top: 3rem;
+			margin-bottom: 3rem;
+			button {
+				border: none;
+				font-size: 1rem;
+				margin-right: 1rem;
+				background: none;
+				&:hover {
+					color: $darkcarrot;
+					cursor: pointer;
+				}
+			}
+		}
+		form.sort {
+			text-align: right;
+			width: 90%;
+			margin: 0 auto;
+			margin-bottom: 3rem;
+			margin-top: 3rem;
+			p {
+				font-size: 1.2rem;
+			}
+			input {
+				margin-left: 1rem;
+			}
+		}
+		section.books {
+			display: flex;
+			width: 90%;
+			margin: 0 auto;
+			justify-content: space-between;
+			flex-wrap: wrap;
+			.bookBox {
+				width: 19%;
+				margin-bottom: 1%;
+				border: 1px solid $black;
+				position: relative;
+				transition: all 0.3s ease;
+				overflow: hidden;
+				img {
+					width: 100%;
+					opacity: 0.5;
+				}
+				.cardStyle {
+					position: absolute;
+					top: 50%;
+					left: 0;
+					width: 100%;
+					text-align: center;
+					background: $light;
+				}
+			&:hover {
+				transform: scale(1.1);
+				cursor: pointer;
+			}
+			}
+		}
+	}
+}
+
+@media all and (max-width: 700px) {
+	body main {
+		section.books {
+			.bookBox {
+				width: 100%;
+			}
+		}
+	}
+}
